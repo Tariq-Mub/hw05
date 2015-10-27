@@ -22,7 +22,7 @@ CFLAGS    = -Weverything -Wextra -pedantic $(LDFLAGS)
 
 .PHONY: edit clean veryclean
 
-target    = area
+target    = radius
 
 $(target) : $(target).c
 
