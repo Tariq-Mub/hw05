@@ -10,7 +10,7 @@
 # wget http://www.phys.uconn.edu/phys2200/downloads/Makefile.sample -O Makefile
 #
 
-EDITOR = /usr/bin/vim
+EDITOR = /usr/bin/gedit
 INDENT = /usr/bin/indent
 
 CC        = clang

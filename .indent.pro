@@ -1,11 +1,23 @@
---2015-10-01 17:52:06--  http://www.phys.uconn.edu/phys2200/downloads/indent.profile.sample
-Resolving www.phys.uconn.edu (www.phys.uconn.edu)... 137.99.19.60
-Connecting to www.phys.uconn.edu (www.phys.uconn.edu)|137.99.19.60|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 902 [text/plain]
-Saving to: ‘indent.profile.sample’
-
-     0K                                                       100% 88.2K=0.01s
-
-2015-10-01 17:52:06 (88.2 KB/s) - ‘indent.profile.sample’ saved [902/902]
+//
+// Download and place this file into your git repository. 
+// Rename it to '.indent.pro' (without quotes)
+//
+// wget http://www.phys.uconn.edu/phys2200/downloads/indent.profile.sample
+// mv indent.profile.sample .indent.pro
+//
+// or
+//
+// wget http://www.phys.uconn.edu/phys2200/downloads/indent.profile.sample -O .indent.pro
+//
+-gnu  // base style
+-bad  // force blank lines after the declarations
+-bli0 // no extra indent for braces
+-nlp --ignore-newlines  //useful for breaking long lines
+-bls  // put braces on the line after 'struct' declaration lines
+-blf  // put braces on line following function definition line
+-npsl // put the type of a procedure on the same line as its name
+-i4   // Set indentation level to 4 spaces
+-nut  // use spaces instead of tabs
+-pmt  // preserve the modification times; potentially useful -
+      // to prevent 'make' from rebuilding after indenting the source
 
