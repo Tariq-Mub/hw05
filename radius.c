@@ -17,6 +17,7 @@ struct triangle
 
 double area (struct triangle t);
 double distance (struct point z, struct point q);
+double CircleRadius (double perimeter, double a);
 
 //returns area of triangle
 double area (struct triangle t)
@@ -38,8 +39,16 @@ double distance (struct point z, struct point q)
     return dist;
 }
 
+//calculate radius of inscribed cirlce
+double CircleRadius (double perimeter, double a){
 
-//main begins
+    double radius;
+    radius = (2 * a) / perimeter;
+    printf ("The radius of the inscribed cirlce is %f \n", radius);
+    return radius;
+}
+
+
 int main (void)
 {
     struct triangle t = (struct triangle) { {0., 0.}, {3., 0}, {0., 4.} };
@@ -60,10 +69,8 @@ int main (void)
     printf ("distance between q, g is %f \n", k);
 
     double perimeter = d + f + k;
-    double radius;
-
-    radius = (2 * a) / perimeter;
-    printf ("The radius of the inscribed cirlce is %f \n", radius);
+    double radius = CircleRadius(perimeter, a);
+    printf ("radius of circle inscribed is %f \n", radius);  
 
     return 0;
 }
