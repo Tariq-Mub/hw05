@@ -40,9 +40,11 @@ double distance (struct point z, struct point q)
 }
 
 //calculate radius of inscribed cirlce
-double CircleRadius (double perimeter, double a){
+double CircleRadius (double perimeter, double a)
+{
 
     double radius;
+
     radius = (2 * a) / perimeter;
     printf ("The radius of the inscribed cirlce is %f \n", radius);
     return radius;
@@ -57,20 +59,21 @@ int main (void)
 
     printf ("area = %f\n", a);
 
-    struct point z = (struct point) { 2., 2. };
-    struct point q = (struct point) { 4., 4. };
-    struct point g = (struct point) { 8., 8. };
-    double d = distance (z, q); //calculates distance between points z, q
-    double f = distance (z, g); //calculates distance between points gz
-    double k = distance (g, q); //calculates distance between points qg
+    //struct point z = (struct point) { 2., 2. };
+    //struct point q = (struct point) { 4., 4. };
+    //struct point g = (struct point) { 8., 8. };
+    double d = distance (t.a, t.b);     //calculates distance between points z, q
+    double f = distance (t.b, t.c);     //calculates distance between points gz
+    double k = distance (t.a, t.c);     //calculates distance between points qg
 
-    printf ("distance between z, q is %f \n", d);
+    printf ("distance between a, b is %f \n", d);
     printf ("distance between z, g is %f \n", f);
     printf ("distance between q, g is %f \n", k);
 
     double perimeter = d + f + k;
-    double radius = CircleRadius(perimeter, a);
-    printf ("radius of circle inscribed is %f \n", radius);  
+    double radius = CircleRadius (perimeter, a);
+
+    printf ("radius of circle inscribed is %f \n", radius);
 
     return 0;
 }

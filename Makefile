@@ -16,6 +16,7 @@ INDENT = /usr/bin/indent
 CC        = clang
 LDFLAGS   = -O
 CFLAGS    = -Weverything -Wextra -pedantic $(LDFLAGS)
+LDLIBS    = -lm
 
 .SUFFIXES:
 .SUFFIXES:  .c .o .h
